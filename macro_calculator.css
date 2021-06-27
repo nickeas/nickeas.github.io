@@ -60,6 +60,7 @@ tr,th,td{
 div.clearfix{
     clear: both;
 }
+
 body{
     overflow-x: hidden;
 }
@@ -67,53 +68,57 @@ body{
 
 header{
     width: 100%;
-    height: auto;
+    height: 55px;
     position: fixed;
-    margin-top: -50px;
+    margin-top: -55px;
     background-color: #ffffff;
     opacity: 70%;
 }
 
+
+div#headimg{
+    width: 25%;
+    height: 50px;
+    float: left;
+    margin: 0 0 0 5%;
+}
+
+div#headimg input{
+    width: auto;
+    height: 50px;
+    
+}
+
 header button{
-        width: 100px;
+        width: 100%;
         height: 30px;
         font-family: monospace;
-        background-color: #f9e8fc;
-        border-color: #f2505d;
-        
+        background-color: antiquewhite;
+        border-color: #000000;
     }
 
 
 
 div.headdiv{
-    height: 50px;
-    margin: 0 3% 0 3%;
+    width: 15%;
+    text-align: center;
     float: left;
     line-height: 50px;
-    
+    margin-left: 1%;
 }
 
 div.headdiv a{
+    font-size: 9pt;
     display: inline-block;
     height: 50px;
     line-height: 50px;
     text-decoration: none;
     color: #000000;
-}
-
-
-div#headimg{
-    height: 50px;
-    float: left;
-    margin: 0 30% 0 5%;
-    padding-top: 5px;
-}
-
-div#headimg input{
-    width: auto;
-    height: 40px;
     
 }
+
+
+
 
 
 /*=============トップ===============*/
@@ -181,9 +186,12 @@ output p{
     margin-bottom: 20px;
     
 }
+
 .size90{
-    width: 75%;/*90%から75%に変更*/
+    width: 75%;
 }
+
+
 
 
 /*=======cont3(メインセクション)==============================*/
@@ -217,6 +225,7 @@ div.cont{
     float: left;
     
 }
+
 @media screen and (max-width: 1024px) {
     div.cont{
         width: 100%;
@@ -225,7 +234,6 @@ div.cont{
          
      }  
 }
-
 
 div.cont table{
     border: 1;
@@ -237,7 +245,6 @@ div.cont table{
 div.cont table td input{
     width: 30px;
 }
-
 @media screen and (max-width: 1024px) {
     div.cont table{
         width:90%;
@@ -249,6 +256,7 @@ div.cont table td input{
         height: 30px;
     } 
 }
+
 
 /*=============説明欄================*/
 h4#description{
@@ -300,6 +308,7 @@ footer{
 footer p{
     margin:0 auto 10px auto;
 }
+
 
 
 
