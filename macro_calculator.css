@@ -241,6 +241,11 @@ div.cont table td input{
 }
 
 @media screen and (max-width: 1024px) {
+    div.cont table{
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     div.cont table td input{
         width: 50px;
         height: 30px;
