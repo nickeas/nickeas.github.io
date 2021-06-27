@@ -67,7 +67,8 @@ header{
     height: auto;
     position: fixed;
     margin-top: -50px;
-    background-color: #f9e8fc;
+    background-color: #000000;
+    opacity: 70%;
 }
 
 header button{
