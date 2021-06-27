@@ -182,14 +182,9 @@ output p{
     
 }
 .size90{
-    width: 90%;
+    width: 75%;/*90%から75%に変更*/
 }
-@media screen and (max-width: 1024px) {
-    .size90{
-        width: 50px;
-        height: 30px;
-    } 
-}
+
 
 /*=======cont3(メインセクション)==============================*/
 
