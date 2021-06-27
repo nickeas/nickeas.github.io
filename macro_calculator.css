@@ -215,6 +215,16 @@ div.cont{
     float: left;
     
 }
+@media screen and (max-width: 1024px) {
+    div.cont{
+        width: 100%;
+         height: auto;
+         margin-left: 2.5%;
+         float: left;
+         
+     }  
+}
+
 
 div.cont table{
     border: 1;
