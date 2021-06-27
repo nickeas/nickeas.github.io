@@ -60,6 +60,9 @@ tr,th,td{
 div.clearfix{
     clear: both;
 }
+body{
+    overflow-x: hidden;
+}
 /*================header===========*/
 
 header{
