@@ -237,7 +237,12 @@ div.cont table td input{
     width: 30px;
 }
 
-
+@media screen and (max-width: 1024px) {
+    div.cont table td input{
+        width: 60px;
+        height: 30px;
+    } 
+}
 
 /*=============説明欄================*/
 h4#description{
