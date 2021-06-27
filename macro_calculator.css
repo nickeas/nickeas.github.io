@@ -189,8 +189,7 @@ output p{
 /*=======cont3(メインセクション)==============================*/
 
 h3{
-        margin:10px;
-        left: 50px;
+        text-align: center;
         font-weight: bold;
         font-style: italic;
         font-family: serif;
