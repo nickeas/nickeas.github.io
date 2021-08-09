@@ -1,0 +1,675 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+html,body{
+    height:100%;
+    widows: 100%;
+    font-family: "Roboto",sans-serif;
+    color:#222;
+    position: relative;
+    
+}
+
+body{
+    font-family: "Roboto","Quicksand","ヒラギノ角ゴPro W3W","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",cursive;
+}
+/*=====================全体を通して使うもの=====================*/
+
+/*幅100%*/
+.w100{
+    width: 100%;
+}
+
+/*幅100%にして中央揃え*/
+
+.w100center{
+    width: 100%;
+    text-align: center;
+}
+
+.paddingT{
+    padding-top: 30px;
+}
+
+.paddingB{
+    padding-bottom: 30px;
+}
+
+.marginB{
+    margin-bottom: 20px;
+}
+
+.marginCenter{
+    margin-left: auto;
+    margin-right: auto;
+}
+.paddingL{
+    padding-left: 20px;
+}
+
+.paddingL10{
+    padding-left: 10px;
+}
+
+.h300{
+    height: 300px;
+}
+
+
+.h400{
+    height: 400px;
+}
+
+.paddingR{
+    padding-right: 20px;
+}
+
+.paddingR10{
+    padding-right: 10px;
+}
+
+.borderL{
+    border-left: 3px solid #222;
+}
+
+.posAbs{
+    position: absolute;
+}
+
+.posRel{
+    position: relative;
+}
+
+.bgimgcenter{
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.bgimgcenterTop{
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+}
+/*position:absolute;のもとでセンタリング*/
+.center{
+    left: 50%;
+    top: 50%;
+  -webkit-transform : translateY(-50%) translateX(-50%);
+  transform : translateY(-50%) translateX(-50%);
+
+}
+
+/*タイトル用pタグ*/
+p.title{
+    font-size: 30px;
+    width: 100%;
+    color: #222;
+    line-height: 30px;
+}
+/*ヘッダー（小見出し）用pタグ*/
+p.header{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/*普通の文に用いるpタグ*/
+p.sentence{
+    font-size: 16px;
+    line-height: 30px;
+    overflow-wrap: break-word;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.items2{
+    width: 50%;
+}
+
+.items3{
+    width: 30%;
+}
+
+@media screen and (max-width:1024px){
+    .container {
+        flex-wrap: wrap;
+    }
+    .items2, .items3{
+        width: 100%;
+    }  
+    
+}
+/*横並び解除*/
+.clearfix{
+    clear: both;
+}
+/*=====================nav=====================*/
+
+nav.navset{
+    background-color:rgba(15, 15, 15, 0.1);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 20;
+    transition: 0.1s;
+}
+
+@media screen and (min-width:1450px){
+    nav.navset{
+        background-color: rgba(256,256,256);
+    }
+}
+
+nav.navset.change-color{
+    background-color: rgba(256,256,256);
+}
+
+div#navlogo{
+    width: 35%;
+    height: 60px;
+    float: left;
+    margin: 15px 0 0 5%;
+}
+
+div#navlogo input{
+    width: auto;
+    height: 60px;
+}
+
+ul.navmenu{
+    display: flex;
+    list-style: none;
+    width: 55%;
+    justify-content: space-between;
+}
+
+li.menu{
+    float: left;
+    width: auto;
+    height: 80px;
+    line-height: 80px;
+}
+
+li.menu a{
+    display: block;
+    text-decoration: none;
+    line-height: 80px;
+    color: #222;
+}
+
+li.menu a:hover{
+    color: #add8e6;
+}
+
+
+@media screen and (max-width:1024px){
+    ul.navmenu{
+        position: absolute;
+        top: 0;
+        right: -70%;
+        width: 70%;
+        height: 100vh;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        background-color:#111;
+        opacity: 0.9;
+        transition: .3s;
+    }
+
+    ul.navmenu.open{
+        right: 0;
+    }
+
+    li.menu{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    li.menu a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    li.menu a:hover{
+        color: #40dee9;
+    }
+    
+    .backArea{
+        position: absolute;
+        top: 0;
+        right: -70%;
+        width: 30%;
+        height: 100vh;
+        z-index: 50;
+        background-color:#fff;
+        opacity: 0;
+        transition: .3s;
+     }
+
+     .backArea.open{
+        left: 0;
+     }
+}
+
+/*=====================ハンバーガーボタン=====================*/
+
+.humBtn{
+    /* ボタンの配置位置  */
+    position: fixed;
+    top: 15px;
+    right: -100px;
+    width: 50px;
+    height: 50px;
+    z-index: 30;
+    background: transparent;
+    border: none;
+    z-index: 999;
+  }
+
+.humBtn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/*=========真ん中のハンバーガー線===========*/
+.humLine{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 4px;
+	background-color: #222;
+	transition: .2s;
+}
+
+.humLine::before,
+.humLine::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #222;
+  transition: .5s;
+}
+
+.humLine::before {
+  /* 上の線の位置 */
+  -webkit-transform: translateY(-16px);
+  transform: traslateY(-16px);
+
+}
+
+.humLine::after {
+  /* 下の線の位置 */
+  -webkit-transform: translateY(16px);
+  transform: traslateY(16px);
+}
+
+@media screen and (max-width:1024px){
+    .humBtn{
+        right: 15px;
+    }
+    .humLine.open {
+        background-color: transparent;
+    }
+    
+    .humLine.open::before , 
+    .humLine.open::after {
+        content: "";
+        background-color: #333;  /* 上下の線の色を変える */
+        transition: .2s;
+    }
+    
+    .humLine.open::before {
+        background-color: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); /* 上の線を傾ける */
+    }
+    
+    .humLine.open::after {
+        background-color: #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);  /* 下の線を傾ける */
+    }
+
+}
+
+
+/*=====================topに戻るボタン=====================*/
+div#back2top{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 20px;
+    bottom: 20px;
+    width: 75px;
+    height: 75px;
+    z-index: 2;
+    background-color:#222;
+    transition: 500ms;
+}
+
+
+.mySizefas{
+    font-size: 50px;
+    color: #fff;
+}
+
+div#back2top a{
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.fadeBtn{
+    opacity: 0;
+}
+
+.activeBtn{
+    opacity: 0.7;
+}
+
+/*=====================top=====================*/
+
+#top{
+    height: 650px;
+    background-image: url(../img/top.png);
+}
+
+#top h1{
+    position: absolute;
+    width: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(50%) translateX(50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    border: 2px solid;
+    border-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    color: #fff;
+    line-height: 60px;
+}
+
+@media screen and (max-width:480px){
+    #top h1{
+        position: absolute;
+        width: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(50%) translateX(50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        border: 2px solid;
+        border-color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 50px;
+        color: #fff;
+        line-height: 60px;
+        word-break: keep-all;
+    }
+}
+
+#top h1 span{
+    font-size: 25px;
+    font-weight: 400;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+/* =====================about=====================*/
+
+#about{
+    background-color: #eee;
+}
+
+#face{
+    height: 100%;
+    text-align: center;
+}
+
+img.facesize{
+    width:250px;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 125px;
+}
+
+
+/*=====================services=====================*/
+
+#services{
+    background-color: #fff;
+}
+
+.serviceItem{
+    height: 550px;
+}
+
+.servicePhoto{
+    height: 200px;
+    width: 100%;
+}
+
+img.servPhoto{
+    height: 100%;
+    width: auto;
+    max-width:100%;
+    max-height:100%;
+}
+
+.serviceDes{
+    width: 200px;
+}
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+
+    .serviceItem{
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: space-between;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .servicePhoto{
+        width: 30%;
+        height: auto;
+        margin-left: 15%;
+        margin-right: 10%;
+    }
+
+    img.servPhoto{
+        width: 100%;
+        height: auto;
+        max-width:100%;
+        max-height:100%;
+        margin-top: -10%;
+    }
+    
+    
+    .serviceDes{
+        width: 45%;
+    }
+    
+}
+
+/*=====================fade用=======================*/
+.fade{
+    opacity : 0;
+    visibility: hidden;
+    transition: 1s;
+    transform: translateY(20px);
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/*=====================works=====================*/
+
+#works{
+    background-color:#eee;
+}
+
+div#workMysite{
+    background-image: url(../img/mysite.png);
+}
+
+div#corp1{
+    background-image: url(../img/corp01.png);
+}
+
+div#corp2{
+    background-image: url(../img/corp02.png);
+}
+
+div#corp3{
+    /*change it later.*/
+    background:none;
+    
+}
+
+/*change it later*/
+@media screen and (max-width:1024px){
+    #corp3{
+        height: 0;
+    }   
+}
+
+.posWork{
+    bottom: 0;
+    background-color: #fff;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.sizeWork{
+    width: 45%;
+    margin-bottom: 30px;
+}
+
+a.divlink{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+a.divlink:hover{
+    box-shadow:  0 7px 7px #aaa;
+
+}
+
+@media screen and (max-width:1024px){
+    .sizeWork{
+        width: 100%;
+    }   
+}
+
+
+/*=====================contact=====================*/
+
+#contact{
+    background-color: #f7f7f7;
+}
+
+div#form{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div#form input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border: #222 1px solid;
+}
+
+div#form textarea{
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: #222 1px solid;
+}
+
+div#form button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 140px;
+    color: #fff;
+    background-color: #777;
+}
+
+div#form button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@media screen and (max-width:480px){
+    div#form{
+        width: 60%;
+    }
+    
+    div#form button{
+        width: 60%;
+        margin-left: 20%;
+    }
+
+}
+
+
+
+/*=====================footer=====================*/
+footer{
+    background-color: #444;
+    color: #eee;
+    width: 100%;
+    height: auto;
+}
+
+p#cright{
+    font-size: 13px;
+    text-align: center;
+    line-height: 80px;
+}
+
